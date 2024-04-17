@@ -1,4 +1,4 @@
-import{M as l,f as e,m as i}from"./index-D3QRZsEY.js";function r(s){const n={code:"code",h1:"h1",p:"p",pre:"pre",span:"span",...l(),...s.components};return[e(n.h1,{children:"说明"}),`
+import{M as l,c as e,m as i}from"./index-CVNV0r9t.js";function r(s){const n={code:"code",h1:"h1",p:"p",pre:"pre",span:"span",...l(),...s.components};return[e(n.h1,{children:"说明"}),`
 `,e(n.p,{children:"正式版本未发布"}),`
 `,e(n.p,{children:`个人开发，需要做的东西很多，需要做主题处理，国际化处理，设计将参考element-plus和ant-design，
 目前只是做了些简单的demo供参考，未来会逐渐完善功能
