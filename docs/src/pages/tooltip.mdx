@@ -1,0 +1,16 @@
+# Tooltip 文字提示
+简单的文字提示气泡框。
+## 何时使用
+鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。
+
+可用来代替系统默认的 title 提示，提供一个 按钮/文字/操作 的文案解释。
+
+## 基础用法
+在这里提供 9 种不同方向的展示方式，可以通过以下完整示例来理解，选择你要的效果。
+
+使用 content 属性来决定 hover 时的提示信息。 由 placement 属性决定展示效果： placement属性值为：[方向]-[对齐位置]；四个方向：top、left、right、bottom；三种对齐位置：start, end，默认为空。 
+如 placement="left-end"，则提示信息出现在目标元素的左侧，且提示信息的底部与目标元素的底部对齐。
+<ComponentPreview name="tooltip" demo="basic" />
+
+## 触发行为
+<ComponentPreview name="tooltip" demo="trigger" />

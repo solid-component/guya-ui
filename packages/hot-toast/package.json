@@ -1,0 +1,43 @@
+{
+    "name": "solid-hot-toast-test",
+    "version": "2.4.4",
+    "type": "module",
+    "license": "MIT",
+    "main": "./src/index.ts",
+    "module": "./src/index.ts",
+    "types": "dist/index.d.ts",
+    "homepage": "https://github.com/solid-component/solid-hot-toast",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/solid-component/solid-hot-toast"
+    },
+    "files": [
+      "dist",
+      "headless",
+      "package.json",
+      "README.md",
+      "types"
+    ],
+    "keywords": [
+      "solid",
+      "notifications",
+      "toast",
+      "snackbar"
+    ],
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "solid-js": "^1.8.15",
+      "solid-styled-components": "^0.28.5"
+    },
+    "devDependencies": {
+      "typescript": "^5.2.2",
+      "vite": "^5.1.4",
+      "vite-plugin-dts": "^3.7.3",
+      "vite-plugin-solid": "^2.10.1"
+    }
+  }
+  

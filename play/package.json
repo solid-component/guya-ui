@@ -1,0 +1,7 @@
+{
+  "name": "happy-ui-app",
+  "version": "0.0.1-beta",
+  "scripts": {
+    "dev": "vite --host"
+  }
+}

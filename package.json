@@ -1,0 +1,35 @@
+{
+  "name": "happy-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": ["packages/*", "docs", "play"],
+  "scripts": {
+    "dev": "vite",
+    "build": "bun run ./internal/build/index.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.13.2",
+    "@zag-js/collapsible": "^0.46.0",
+    "@zag-js/switch": "^0.46.0",
+    "classnames": "^2.5.1",
+    "csstype": "^3.1.3",
+    "happy-ui": "workspace:*",
+    "solid-dada-icons": "^0.0.1",
+    "solid-hot-toast": "2.4.5",
+    "solid-js": "^1.8.15",
+    "solid-styled-components": "^0.28.5",
+    "solid-transition-group": "^0.2.3",
+    "solid-trigger": "^1.0.1"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "^3.0.1",
+    "@types/node": "^20.12.7",
+    "fast-glob": "^3.3.2",
+    "rollup": "^4.14.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-solid": "^2.10.2"
+  }
+}

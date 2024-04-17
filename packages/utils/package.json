@@ -1,0 +1,5 @@
+{
+  "name": "happy-utils",
+  "type": "module",
+  "module": "index.ts"
+}

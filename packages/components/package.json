@@ -1,0 +1,13 @@
+{
+  "name": "happy-ui",
+  "version": "0.0.1-beta",
+  "module": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@zag-js/radio-group": "^0.46.0",
+    "@zag-js/solid": "^0.46.0"
+  }
+}
