@@ -1,4 +1,4 @@
-import{M as c,c as e,m as o}from"./index-Be0j89dM.js";function l(i){const r={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...i.components},{ComponentPreview:n,ComponentSource:s}=r;return n||a("ComponentPreview",!0),s||a("ComponentSource",!0),[e(r.h1,{children:"Tag 标签"}),`
+import{M as c,c as e,m as o}from"./index-B2vUBehi.js";function l(i){const r={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...i.components},{ComponentPreview:n,ComponentSource:s}=r;return n||a("ComponentPreview",!0),s||a("ComponentSource",!0),[e(r.h1,{children:"Tag 标签"}),`
 `,e(r.p,{children:"用于标记和选择。"}),`
 `,e(r.h2,{children:"基础用法"}),`
 `,e(r.p,{children:"由 type 属性来选择 tag 的类型"}),`
