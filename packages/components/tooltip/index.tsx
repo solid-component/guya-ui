@@ -1,7 +1,7 @@
 import { JSX, mergeProps } from "solid-js";
 import Trigger, { TriggerProps } from "solid-trigger";
 import { genTooltip } from "./style";
-import { css, useTheme } from "solid-styled-components";
+import { css } from "solid-styled-components";
 
 export type TooltipProps = Omit<TriggerProps, "popup" | "transition"> & {
   content: JSX.Element;

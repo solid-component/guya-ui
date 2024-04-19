@@ -1,3 +1,4 @@
+import { urlPrefix } from "@/contants";
 import { useLocation, useNavigate } from "@solidjs/router";
 import { For, Show, createSignal, children } from "solid-js";
 import { css } from "solid-styled-components";
@@ -13,6 +14,10 @@ const [componentsMenu] = createSignal<Menu[]>([
       {
         title: "Space 间距",
         path: "space",
+      },
+      {
+        title: "Icon 图标",
+        path: "icon",
       },
     ],
   },
@@ -35,6 +40,10 @@ const [componentsMenu] = createSignal<Menu[]>([
       {
         title: "Tag 标签",
         path: "tag",
+      },
+      {
+        title: "Card 卡片",
+        path: "card",
       },
       {
         title: "Collapse 折叠面板",
@@ -83,6 +92,15 @@ const [guideMenu] = createSignal<Menu[]>([
       },
     ],
   },
+  {
+    title: '进阶',
+    children: [
+      {
+        title: "主题",
+        path: "theme",
+      },
+    ],
+  }
 ]);
 
 type MenuItem = {
@@ -108,8 +126,10 @@ export function Sider() {
 
   const Item = (menu: { title: string; path: string }) => {
     const path = () =>
-      isGuide() ? "/guide/" + menu.path : "/components/" + menu.path;
-    const active = () => location.pathname === path();
+      isGuide() ? "guide/" + menu.path : "components/" + menu.path;
+    const active = () => {
+      return location.pathname === urlPrefix + path();
+    };
     return (
       <div
         class={css({

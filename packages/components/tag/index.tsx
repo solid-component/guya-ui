@@ -1,37 +1,53 @@
-import { JSX } from "solid-js";
-import { css } from "solid-styled-components";
+import classNames from "classnames";
+import { JSX, Show } from "solid-js";
+import { tagCss } from "./style";
+import { genPrefixClasses } from "../theme";
+import { Close, CloseBold } from "solid-dada-icons";
 
 export type TagProps = {
   type?: "primary";
   children?: JSX.Element;
+  class?: string;
+  closeIcon?: boolean | JSX.Element;
+  classList?: {
+    [k: string]: boolean | undefined;
+  };
+  onClose?: JSX.EventHandlerUnion<HTMLSpanElement, MouseEvent>
 };
 
 export function Tag(props: TagProps) {
+  const classes = () => {
+    const cla = classNames(
+      tagCss(),
+      genPrefixClasses({
+        tag: true,
+        [`tag-${props.type}`]: !!props.type,
+      }),
+      props.classList,
+      props.class
+    );
+    return cla;
+  };
   return (
-    <span
-      class={css({
-        display: "inline-flex",
-        justifyContent: "center",
-        alignItems: "center",
-        verticalAlign: "middle",
-        whiteSpace: "nowrap",
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        borderColor: 'transparent',
-        padding: '0 9px',
-        borderRadius: '4px',
-        [`&.happy-tag-primary`]: {
-            background: '#ecf5ff',
-            borderColor: '#d9ecff',
-            color: '#409eff'
-        }
-      })}
-      classList={{
-        "happy-tag": true,
-        [`happy-tag-${props.type}`]: !!props.type,
-      }}
-    >
+    <span class={classes()}>
       {props.children}
+      <Show when={props.closeIcon}>
+        <span
+          class={classNames(
+            genPrefixClasses({
+              [`tag-close-icon`]: true,
+            })
+          )}
+          onClick={props.onClose}
+        >
+          <Show
+            when={typeof props.closeIcon === "boolean"}
+            fallback={props.closeIcon}
+          >
+            <Close />
+          </Show>
+        </span>
+      </Show>
     </span>
   );
 }

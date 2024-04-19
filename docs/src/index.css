@@ -17,3 +17,11 @@ p {
 p:last-child {
   margin: 0;
 }
+.anchor-side {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .anchor-side {
+    display: block;
+  }
+}

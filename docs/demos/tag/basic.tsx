@@ -2,9 +2,11 @@ import { Space, Tag } from "happy-ui";
 
 export function Basic() {
   return (
-    <Space>
+    <div>
+      <Tag>123</Tag>
       <Tag type="primary">123</Tag>
-      <Tag type="primary">123</Tag>
-    </Space>
+      <Tag closeIcon>123</Tag>
+      <Tag type="primary" closeIcon>123</Tag>
+    </div>
   );
 }

@@ -2,7 +2,7 @@ import { JSX } from "solid-js";
 import { Size, Status } from "solid-styled-components";
 import { Properties } from "csstype";
 
-export type ButtonType = "primary" | "success" | 'info' | 'danger';
+export type ButtonType = "primary" | "text" | "link";
 
 export interface ButtonProps
   extends Omit<JSX.ButtonHTMLAttributes<HTMLButtonElement>, "type"> {
@@ -14,6 +14,7 @@ export interface ButtonProps
   children?: JSX.Element;
   type?: ButtonType;
   plain?: boolean;
+  danger?: boolean
   round?: boolean;
   circle?: boolean;
 }

@@ -47,7 +47,7 @@ export default function Navbar() {
             cursor: "pointer",
             color: isGuide() ? "#4090ff" : "unset",
           }}
-          onClick={() => navigate("/guide/installation")}
+          onClick={() => navigate("guide/installation")}
         >
           指南
         </div>
@@ -56,7 +56,7 @@ export default function Navbar() {
             cursor: "pointer",
             color: isComponents() ? "#4090ff" : "unset",
           }}
-          onClick={() => navigate("/components/button")}
+          onClick={() => navigate("components/button")}
         >
           组件
         </div>

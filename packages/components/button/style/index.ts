@@ -1,97 +1,240 @@
-import { CSSAttribute, css, useTheme } from "solid-styled-components";
-import { genPrefix, genSize, genStatus, genToken } from "../../theme/utils";
-import { buttonSize } from "./size";
+import { css } from "solid-styled-components";
+import { genStatus } from "../../theme/utils";
+import { genSizeLargeButton, genSizeSmallButton } from "./size";
 
-export const buttonPrimaryCss = (): CSSAttribute => {
-  const token = genToken();
+import { ButtonToken, prepareComponentToken } from "./token";
+import { genStyle } from "../../theme";
+import { Properties } from "csstype";
+import { GenStyle } from "../../theme/types";
+
+export const buttonPrimaryCss: GenStyle<ButtonToken> = (token) => {
   return {
-    [`&.${genPrefix('btn-primary')}`]: {
-      borderColor: token.primary.brand,
-      backgroundColor: token.primary.brand,
-      color: "#fff",
+    [`&.${token.componentCls}-primary`]: {
+      backgroundColor: token.colorPrimary,
+      boxShadow: token.primaryShadow,
+      color: token.primaryColor,
       ...genStatus({
         hover: {
-          color: "#fff",
-          borderColor: token.primary.light3,
-          background: token.primary.light3,
+          color: token.colorTextLightSolid,
+          background: token.colorPrimaryHover,
         },
         active: {
-          color: "#fff",
-          borderColor: token.primary.dark2,
-          background: token.primary.dark2,
+          color: token.colorTextLightSolid,
+          background: token.colorPrimaryActive,
         },
         disabled: {
-          color: "#fff",
-          background: "#a0cfff",
-          borderColor: "#a0cfff",
+          cursor: "not-allowed",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor: token.borderColorDisabled,
+          color: token.colorTextDisabled,
+          background: token.colorBgContainerDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+    [`&.${token.componentCls}-primary.${token.componentCls}-drangrous`]: {
+      background: token.colorError,
+      boxShadow: token.dangerShadow,
+      color: token.dangerColor,
+      ...genStatus({
+        hover: {
+          background: token.colorErrorHover,
+        },
+        active: {
+          background: token.colorErrorActive,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          borderColor: token.borderColorDisabled,
+          color: token.colorTextDisabled,
+          background: token.colorBgContainerDisabled,
+          boxShadow: "none",
         },
       }),
     },
   };
 };
 
-export const buttonDefaultCss = (): CSSAttribute => {
-  const token = genToken();
+export const buttonTextCss: GenStyle<ButtonToken> = (token) => {
   return {
-    color: "#606266",
-    background: "#fff",
-    height: "32px",
-    padding: "8px 15px",
-    borderRadius: "4px",
-    borderColor: "#dcdfe6",
-    ...genStatus({
-      hover: {
-        color: token.primary.brand,
-        borderColor: token.primary.light7,
-        background: token.primary.light9,
-      },
-      active: {
-        color: token.primary.brand,
-        borderColor: token.primary.brand,
-        background: token.primary.light9,
-      },
-      disabled: {
-        color: "#a8abb2",
-        background: "#ffffff",
-        borderColor: "#e4e7ed",
-      },
-    }),
+    [`&.${token.componentCls}-text`]: {
+      ...genStatus({
+        hover: {
+          color: token.colorText,
+          background: token.textHoverBg,
+        },
+        active: {
+          color: token.colorText,
+          background: token.colorBgTextActive,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          color: token.colorTextDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+    [`&.${token.componentCls}-text.${token.componentCls}-drangrous`]: {
+      color: token.colorError,
+      ...genStatus({
+        hover: {
+          color: token.colorErrorHover,
+          background: token.colorErrorBg,
+        },
+        active: {
+          color: token.colorErrorHover,
+          background: token.colorErrorBg,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          color: token.colorTextDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
   };
 };
 
+const buttonLinkCss: GenStyle<ButtonToken> = (token) => {
+  return {
+    [`&.${token.componentCls}-link`]: {
+      color: token.colorLink,
+      ...genStatus({
+        hover: {
+          color: token.colorLinkHover,
+          background: token.linkHoverBg,
+        },
+        active: {
+          color: token.colorLinkActive,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          color: token.colorTextDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+    [`&.${token.componentCls}-link.${token.componentCls}-drangrous`]: {
+      color: token.colorError,
+      ...genStatus({
+        hover: {
+          color: token.colorErrorHover,
+        },
+        active: {
+          color: token.colorErrorActive,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          color: token.colorTextDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+  };
+};
+
+export const buttonDefaultCss: GenStyle<ButtonToken> = (token) => {
+  return {
+    [`&.${token.componentCls}-default`]: {
+      background: token.defaultBg,
+      borderColor: token.defaultBorderColor,
+      color: token.defaultColor,
+      boxShadow: token.defaultShadow,
+
+      ...genStatus({
+        hover: {
+          color: token.defaultHoverColor,
+          borderColor: token.defaultHoverBorderColor,
+          background: token.defaultHoverBg,
+        },
+        active: {
+          color: token.defaultActiveColor,
+          borderColor: token.defaultActiveBorderColor,
+          background: token.defaultActiveBg,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          borderColor: token.borderColorDisabled,
+          color: token.colorTextDisabled,
+          background: token.colorBgContainerDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+    [`&.${token.componentCls}-default.${token.componentCls}-drangrous`]: {
+      color: token.colorError,
+      borderColor: token.colorError,
+      ...genStatus({
+        hover: {
+          color: token.colorErrorHover,
+          borderColor: token.colorErrorBorderHover,
+        },
+        active: {
+          color: token.colorErrorActive,
+          borderColor: token.colorErrorActive,
+        },
+        disabled: {
+          cursor: "not-allowed",
+          borderColor: token.borderColorDisabled,
+          color: token.colorTextDisabled,
+          background: token.colorBgContainerDisabled,
+          boxShadow: "none",
+        },
+      }),
+    },
+  };
+};
+
+const resetButton = (): Properties => ({
+  display: "inline-flex",
+  justifyContent: "center",
+  alignItems: "center",
+  position: "relative",
+  outline: "none",
+  appearance: "none",
+  userSelect: "none",
+  cursor: "pointer",
+  whiteSpace: "nowrap",
+  verticalAlign: "middle",
+  boxSizing: "border-box",
+  background: "transparent",
+  touchAction: 'manipulation',
+  margin: 0,
+});
+
 export const buttonCss = () => {
-  return css({
-    display: "inline-flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
-    outline: "none",
-    appearance: "none",
-    userSelect: "none",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-    verticalAlign: "middle",
-    boxSizing: "border-box",
-    background: "transparent",
-    padding: 0,
-    margin: 0,
-    borderStyle: "solid",
-    borderWidth: "1px",
-    borderColor: "transparent",
-    transition: ".1s",
-    ...buttonDefaultCss(),
-    ...buttonPrimaryCss(),
-    ...buttonSize(),
-    [`&+.${genPrefix("btn")}`]: {
-      marginLeft: "12px",
+  return genStyle(
+    "btn",
+    (token) => {
+      return css({
+        ...resetButton(),
+        ...buttonDefaultCss(token),
+        ...buttonPrimaryCss(token),
+        ...buttonTextCss(token),
+        ...buttonLinkCss(token),
+        color: token.colorText,
+        transition: `all ${token.motionDurationMid} ${token.motionEaseInOut}`,
+        border: `${(token.lineWidth)}px ${token.lineType} transparent`,
+        height: token.controlHeight + "px",
+        fontSize: token.contentFontSize + "px",
+        lineHeight: token.contentLineHeight,
+        borderRadius: token.borderRadiusSM + 'px',
+        "&[data-size=small]": genSizeSmallButton(token),
+        "&[data-size=large]": genSizeLargeButton(token),
+        [`&+.${token.componentCls}`]: {
+          marginLeft: "12px",
+        },
+        [`&.${token.componentCls}-round`]: {
+          borderRadius: "99px",
+        },
+        [`&.${token.componentCls}-circle`]: {
+          padding: 0,
+          borderRadius: "50%",
+          aspectRatio: "1/1",
+        },
+      });
     },
-    [`&.${genPrefix("btn-round")}`]: {
-      borderRadius: "99px",
-    },
-    [`&.${genPrefix("btn-circle")}`]: {
-      padding: 0,
-      borderRadius: "50%",
-      aspectRatio: "1/1",
-    },
-  });
+    prepareComponentToken
+  );
 };

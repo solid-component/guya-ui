@@ -3,6 +3,13 @@ import { ButtonTheme } from "./button/types";
 import { Properties } from "csstype";
 // import { ButtonTheme } from "./button/types";
 // import { InputTheme } from "./input/types";
+import type {
+  AliasToken,
+  MapToken,
+  OverrideToken,
+  SeedToken,
+} from "./theme/interface";
+import { Theme } from "./theme";
 
 declare module "solid-styled-components" {
   export type Size = "large" | "small";
@@ -29,5 +36,18 @@ declare module "solid-styled-components" {
     // input?: InputTheme;
   };
 
-  export interface DefaultTheme extends Components {}
+  export type ComponentsToken = {
+    [key in keyof OverrideToken]?: OverrideToken[key] & {
+      // theme?: Theme<SeedToken, MapToken>;
+    };
+  };
+
+  export type DesignTokenProviderProps = {
+    prefixCls?: string
+    seedToken?: Partial<SeedToken>;
+    theme?: Theme<SeedToken, MapToken>;
+    components?: ComponentsToken;
+  };
+
+  export interface DefaultTheme extends DesignTokenProviderProps {}
 }

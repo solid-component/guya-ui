@@ -3,7 +3,7 @@ import { Check, CloseBold } from "solid-dada-icons";
 import { createSignal } from "solid-js";
 
 export function Disabled() {
-  const [checked, setChecked] = createSignal(false);
+  const [checked, setChecked] = createSignal(true);
   return (
     <Space>
       <Switch />
@@ -16,6 +16,16 @@ export function Disabled() {
         }}
       />
       <Switch
+        disabled
+        loading
+        checkedChildren="开"
+        unCheckedChildren="关闭"
+        onCheckedChange={(detail) => {
+          setChecked(detail.checked);
+        }}
+      />
+      <Switch
+        loading
         checked={checked()}
         checkedChildren="开启"
         unCheckedChildren="关闭"

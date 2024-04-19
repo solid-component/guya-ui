@@ -1,61 +1,24 @@
-import { OutputOptions, rollup } from "rollup";
-import { build } from "vite";
-import { compRoot, epRoot, pkgRoot } from "../build-utils/src/paths";
-import solid from "vite-plugin-solid";
-import { generateExternal } from "./rollup";
-import { buildConfigEntries } from "./build-info";
-import glob from "fast-glob";
-import { excludeFiles } from "../build-utils/src/pkg";
+import path from "path";
+import { buildModule, copyFiles } from "./task";
+import { buildOutput } from "../build-utils/src/paths";
+import { copy } from "fs-extra";
+import { buildConfig } from "./build-info";
+import { generateTypesDefinitions } from "./tasks/types-definitions";
 
-async function buildModule() {
-  const input = excludeFiles(
-    await glob("**/*.{js,ts,tsx}", {
-      cwd: pkgRoot,
-      absolute: true,
-      onlyFiles: true,
-    })
-  );
-  // const res = await generateExternal({ full: false })
-  buildConfigEntries.map(async ([module, config]) => {
-    await build({
-      plugins: [solid()],
-      build: {
-        lib: {
-          entry: compRoot,
-          formats: [module],
-        },
-        rollupOptions: {
-          input,
-          output: {
-            format: config.format,
-            dir: config.output.path,
-            exports: module === "cjs" ? "named" : undefined,
-            preserveModules: true,
-            preserveModulesRoot: epRoot,
-            sourcemap: true,
-            entryFileNames: `[name].${config.ext}`,
-          },
-          external: await generateExternal({ full: false }),
-          treeshake: false,
-        },
-      },
-    });
-  });
-  // await writeBundles(
-  //   bundle,
-  //   buildConfigEntries.map(([module, config]): OutputOptions => {
-  //     console.log("module", module);
-  //     console.log("config", config);
-  //     return {
-  //       format: config.format,
-  //       dir: config.output.path,
-  //       exports: module === "cjs" ? "named" : undefined,
-  //       preserveModules: true,
-  //       preserveModulesRoot: epRoot,
-  //       sourcemap: true,
-  //       entryFileNames: `[name].${config.ext}`,
-  //     };
-  //   })
-  // );
-}
-buildModule();
+export const copyTypesDefinitions = async () => {
+  const src = path.resolve(buildOutput, "types", "packages");
+  console.log('src', src)
+  const copyTypes = (module: "es" | "cjs") =>
+    copy(src, buildConfig[module].output.path, { recursive: true });
+
+  await copyTypes("es");
+  await copyTypes("cjs");
+};
+
+const gennerate = async () => {
+  await buildModule();
+  await generateTypesDefinitions()
+  await copyTypesDefinitions();
+  await copyFiles();
+};
+gennerate();

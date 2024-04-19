@@ -1,0 +1,21 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+      "composite": true,
+      "jsx": "preserve",
+      "jsxImportSource": "solid-js",
+      "lib": ["ES2018", "DOM", "DOM.Iterable"],
+      "skipLibCheck": true
+    },
+    "include": ["packages/**/*.ts","packages/**/*.tsx"],
+    "exclude": [
+      "node_modules",
+      "**/dist",
+      "**/__tests__/**/*",
+      "**/gulpfile.ts",
+      "**/test-helper",
+      "packages/test-utils",
+      "**/*.md"
+    ]
+  }
+  

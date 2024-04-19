@@ -7,10 +7,13 @@
   "workspaces": ["packages/*", "docs", "play"],
   "scripts": {
     "dev": "vite",
-    "build": "bun run ./internal/build/index.ts",
-    "preview": "vite preview"
+    "build": "bun run clean:dist && bun run ./internal/build/index.ts",
+    "preview": "vite preview",
+    "clean:dist": "rimraf dist"
   },
   "dependencies": {
+    "@ant-design/colors": "^7.0.2",
+    "@ctrl/tinycolor": "^4.1.0",
     "@solidjs/router": "^0.13.2",
     "@zag-js/collapsible": "^0.46.0",
     "@zag-js/switch": "^0.46.0",
@@ -25,10 +28,17 @@
     "solid-trigger": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/parser": "^7.24.4",
+    "@babel/plugin-transform-typescript": "^7.24.4",
     "@mdx-js/mdx": "^3.0.1",
     "@types/node": "^20.12.7",
+    "consola": "^3.2.3",
     "fast-glob": "^3.3.2",
+    "recast": "^0.23.6",
+    "rimraf": "^5.0.5",
     "rollup": "^4.14.3",
+    "ts-morph": "^22.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-solid": "^2.10.2"

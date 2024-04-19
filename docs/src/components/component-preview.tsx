@@ -1,21 +1,17 @@
 import { css } from "solid-styled-components";
-import { createSignal, JSX, Suspense } from "solid-js";
+import { JSX } from "solid-js";
+import * as Components from "./components";
 
 export const ComponentPreview = (props: {
   name: string;
   demo: string;
   children?: JSX.Element;
 }) => {
-  const [demos, setDemos] = createSignal({});
+  console.log('rr', props)
   const formate = (string: string) =>
     string.charAt(0).toUpperCase() + string.slice(1);
-  const Component = () => import(`../../demos/${props.name}`);
 
-  const resigtry = async () => {
-    const res = await Component();
-    setDemos(res);
-  };
-  resigtry();
+  const demos = () => Components[formate(props.name)];
   const preview = () => {
     if (!props.demo) {
       return <div>{props.demo}不能为空</div>;

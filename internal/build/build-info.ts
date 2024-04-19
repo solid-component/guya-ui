@@ -1,6 +1,6 @@
 import path from "path";
 import { ModuleFormat } from "rollup";
-import { epOutput } from "../build-utils/src/paths";
+import { huOutput } from "../build-utils/src/paths";
 
 export const modules = ["es", "cjs"] as const;
 export type Module = (typeof modules)[number];
@@ -31,7 +31,7 @@ export const buildConfig: Record<Module, BuildInfo> = {
     ext: "js",
     output: {
       name: "es",
-      path: path.resolve(epOutput, "es"),
+      path: path.resolve(huOutput, "es"),
     },
     bundle: {
       path: `${PKG_NAME}/es`,
@@ -43,7 +43,7 @@ export const buildConfig: Record<Module, BuildInfo> = {
     ext: "cjs",
     output: {
       name: "lib",
-      path: path.resolve(epOutput, "lib"),
+      path: path.resolve(huOutput, "lib"),
     },
     bundle: {
       path: `${PKG_NAME}/lib`,

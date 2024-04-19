@@ -93,6 +93,7 @@ export default defineConfig({
       // },
     }),
   ],
+  base: '/happy-ui/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"), // 将 @ 映射到项目的 src 目录

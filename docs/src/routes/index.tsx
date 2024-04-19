@@ -7,17 +7,21 @@ export const routes: any[] = [
     component: lazy(() => import("../pages/home")),
   },
   {
-    path: "/guide",
+    path: "guide",
     component: (props) => props.children,
     children: [
       {
         path: "installation",
         component: lazy(() => import("../pages/guide/installation.mdx")),
       },
+      {
+        path: 'theme',
+        component: lazy(() => import("../pages/guide/theme.mdx")),
+      }
     ],
   },
   {
-    path: "/components",
+    path: "components",
     component: (props) => props.children,
     children: [
       {
@@ -67,7 +71,15 @@ export const routes: any[] = [
       {
         path: "switch",
         component: lazy(() => import("../pages/switch.mdx")),
-      }
+      },
+      {
+        path: "icon",
+        component: lazy(() => import("../pages/icon.mdx")),
+      },
+      {
+        path: "card",
+        component: lazy(() => import("../pages/card.mdx")),
+      },
     ],
   },
 ];

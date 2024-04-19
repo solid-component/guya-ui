@@ -1,8 +1,8 @@
 import { getPackageDependencies } from "../build-utils/src/pkg";
-import { epPackage } from "../build-utils/src/paths";
+import { huPackage } from "../build-utils/src/paths";
 
 export const generateExternal = async (options: { full: boolean }) => {
-  const { dependencies, peerDependencies } = getPackageDependencies(epPackage);
+  const { dependencies, peerDependencies } = getPackageDependencies(huPackage);
   console.log("dependencies", dependencies)
   console.log("peerDependencies", peerDependencies)
   return (id: string) => {

@@ -1,0 +1,109 @@
+{
+    "name": "happy-ui-dev",
+    "version": "0.0.0-dev.1",
+    "description": "A Component Library for Solid",
+    "keywords": [
+      "happy-ui",
+      "component library",
+      "ui framework",
+      "ui",
+      "solid"
+    ],
+    "license": "MIT",
+    "type": "module",
+    "module": "es/index.js",
+    "main": "lib/index.cjs",
+    "types": "es/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./es/index.d.ts",
+        "import": "./es/index.mjs",
+        "require": "./lib/index.js"
+      },
+      "./global": {
+        "types": "./global.d.ts"
+      },
+      "./es": {
+        "types": "./es/index.d.ts",
+        "import": "./es/index.mjs"
+      },
+      "./lib": {
+        "types": "./lib/index.d.ts",
+        "require": "./lib/index.js"
+      },
+      "./es/*.mjs": {
+        "types": "./es/*.d.ts",
+        "import": "./es/*.mjs"
+      },
+      "./es/*": {
+        "types": [
+          "./es/*.d.ts",
+          "./es/*/index.d.ts"
+        ],
+        "import": "./es/*.mjs"
+      },
+      "./lib/*.js": {
+        "types": "./lib/*.d.ts",
+        "require": "./lib/*.js"
+      },
+      "./lib/*": {
+        "types": [
+          "./lib/*.d.ts",
+          "./lib/*/index.d.ts"
+        ],
+        "require": "./lib/*.js"
+      },
+      "./*": "./*"
+    },
+    "unpkg": "dist/index.full.js",
+    "jsdelivr": "dist/index.full.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/element-plus/element-plus.git"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "style": "dist/index.css",
+    "sideEffects": [
+      "dist/*",
+      "theme-chalk/**/*.css",
+      "theme-chalk/src/**/*.scss",
+      "es/components/*/style/*",
+      "lib/components/*/style/*"
+    ],
+    "peerDependencies": {
+        "solid-js": "^1.8.15"
+    },
+    "dependencies": {
+        "@ant-design/colors": "^7.0.2",
+        "@ctrl/tinycolor": "^4.1.0",
+        "@solidjs/router": "^0.13.2",
+        "@zag-js/collapsible": "^0.46.0",
+        "@zag-js/switch": "^0.46.0",
+        "classnames": "^2.5.1",
+        "solid-dada-icons": "^0.0.1",
+        "solid-hot-toast": "2.4.5",
+        "solid-js": "^1.8.15",
+        "solid-styled-components": "^0.28.5",
+        "solid-transition-group": "^0.2.3",
+        "solid-trigger": "^1.0.1"
+    },
+    "devDependencies": {
+      "@types/node": "*",
+      "csstype": "^2.6.20",
+      "vue": "^3.2.37",
+      "vue-router": "^4.0.16"
+    },
+    "vetur": {
+      "tags": "tags.json",
+      "attributes": "attributes.json"
+    },
+    "web-types": "web-types.json",
+    "browserslist": [
+      "> 1%",
+      "not ie 11",
+      "not op_mini all"
+    ]
+  }
+  

@@ -2,6 +2,8 @@ import { Show, createEffect, createSignal, splitProps } from "solid-js";
 import { InputProps } from "./types";
 import { inputCss } from "./style";
 import { CircleClose } from "solid-dada-icons";
+import classNames from 'classnames'
+import { genPrefixClasses } from "../theme";
 
 export const Input = (props: InputProps) => {
   const [local, other] = splitProps(props, ["prefix", "class", "suffix"]);
@@ -18,15 +20,25 @@ export const Input = (props: InputProps) => {
   const genClass = () =>
     props.class ? props.class + " " + inputCss() : inputCss();
 
-  return (
-    <div
-      class={genClass()}
-      classList={{
+  const classes = () => {
+    return classNames(
+      inputCss(),
+      genPrefixClasses({
+        "input": true,
         [`input-${props.size}`]: !!props.size,
+      }),
+      {
         ["is-focus"]: focus(),
         ["is-disabled"]: props.disabled,
-        ...props.classList,
-      }}
+      },
+      props.classList,
+      props.class
+    );
+  };
+
+  return (
+    <div
+      class={classes()}
       onClick={() => {
         ref().focus();
       }}

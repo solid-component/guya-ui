@@ -1,7 +1,8 @@
 import { splitProps } from "solid-js";
 import { buttonCss } from "./style";
 import { ButtonProps } from "./types";
-import { genPrefixClasses } from "../theme/utils";
+import classNames from "classnames";
+import { genPrefixClasses } from "../theme";
 
 export const Button = (props: ButtonProps) => {
   const [local, reset] = splitProps(props, [
@@ -9,29 +10,34 @@ export const Button = (props: ButtonProps) => {
     "circle",
     "classList",
     "class",
+    "danger",
     "type",
     "size",
   ]);
-  const genClass = () =>
-    props.class ? props.class + " " + buttonCss() : buttonCss();
+
+  const classes = () => {
+    const cla = classNames(
+      buttonCss(),
+      genPrefixClasses({
+        ["btn-default"]: !local.type,
+        [`btn-${local.type}`]: !!local.type,
+        [`btn-drangrous`]: !!local.danger,
+        [`btn-round`]: local.round,
+        [`btn-circle`]: local.circle,
+        [`is-disabled`]: props.disabled,
+        btn: true,
+      }),
+      props.classList,
+      props.class
+    );
+    return cla;
+  };
+
   return (
-    <button
-      {...reset}
-      class={genClass()}
-      classList={{
-        ...genPrefixClasses({
-          [`btn-${local.size}`]: !!local.size,
-          [`btn-${local.type}`]: !!local.type,
-          [`btn-round`]: local.round,
-          [`btn-circle`]: local.circle,
-          [`is-disabled`]: props.disabled,
-          btn: true,
-        }),
-        ...props.classList,
-      }}
-    >
+    <button {...reset} data-size={props.size} class={classes()}>
       {props.children}
     </button>
   );
 };
-export default Button
+export default Button;
+export * from './types'

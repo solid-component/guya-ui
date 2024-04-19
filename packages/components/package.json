@@ -1,6 +1,7 @@
 {
   "name": "happy-ui",
   "version": "0.0.1-beta",
+  "type": "module",
   "module": "index.js",
   "main": "index.js",
   "scripts": {

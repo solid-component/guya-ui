@@ -1,0 +1,10 @@
+{
+  "name": "github-page",
+  "type": "module",
+  "scripts": { 
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

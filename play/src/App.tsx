@@ -5,13 +5,8 @@ import { createStore, unwrap } from "solid-js/store";
 import { createRoot, createSignal } from "../hooks/signal";
 
 function App() {
-  let count = () => 0;
-  let setCount = () => {};
+  let [count, setCount] = createSignal(0);
 
-  createRoot(() => {
-    [count, setCount] = createSignal(0);
-    console.log("count", count);
-  });
   return (
     // <ThemeProvider theme={}>
     <div>
