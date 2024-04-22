@@ -1,4 +1,4 @@
-import{M as c,c as r,m as o}from"./index-CR7AtsoQ.js";function n(s){const l={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...s.components},{ComponentPreview:i,ComponentSource:e}=l;return i||a("ComponentPreview"),e||a("ComponentSource"),[r(l.h1,{children:"Tooltip 文字提示"}),`
+import{M as c,c as r,m as o}from"./index-CCSX566d.js";function n(s){const l={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...s.components},{ComponentPreview:i,ComponentSource:e}=l;return i||a("ComponentPreview"),e||a("ComponentSource"),[r(l.h1,{children:"Tooltip 文字提示"}),`
 `,r(l.p,{children:"简单的文字提示气泡框。"}),`
 `,r(l.h2,{children:"何时使用"}),`
 `,r(l.p,{children:"鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。"}),`
