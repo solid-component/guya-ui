@@ -1,5 +1,5 @@
-import{M as i,c as e,m as l}from"./index-CCSX566d.js";function s(r){const n={a:"a",code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...i(),...r.components};return[e(n.h1,{children:"Icon 图标"}),`
-`,e(n.p,{children:"guya-ui-component 提供了一套常用的图标集合。"}),`
+import{M as i,c as e,m as l}from"./index-CRTjpkgI.js";function s(r){const n={a:"a",code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...i(),...r.components};return[e(n.h1,{children:"Icon 图标"}),`
+`,e(n.p,{children:"guya-ui 提供了一套常用的图标集合。"}),`
 `,e(n.h1,{children:"安装"}),`
 `,e(n.h2,{children:"使用包管理器"}),`
 `,e(n.pre,{className:"shiki shiki-themes vitesse-light vitesse-dark",style:{backgroundColor:"#ffffff","--shiki-dark-bg":"#121212",color:"#393a34","--shiki-dark":"#dbd7caee"},tabIndex:"0",get children(){return e(n.code,{get children(){return[e(n.span,{className:"line",get children(){return e(n.span,{style:{color:"#A0ADA0","--shiki-dark":"#758575DD"},children:"# 选择一个你喜欢的包管理器"})}}),`
