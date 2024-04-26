@@ -1,4 +1,4 @@
-import{M as d,c as r,m as o}from"./index-CRTjpkgI.js";function c(s){const l={code:"code",h1:"h1",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...d(),...s.components},{ComponentPreview:i,ComponentSource:e,Table:a}=l;return i||n("ComponentPreview"),e||n("ComponentSource"),a||n("Table"),[r(l.h1,{children:"Button按钮"}),`
+import{M as d,c as r,m as o}from"./index-Cb_gSiLb.js";function c(s){const l={code:"code",h1:"h1",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...d(),...s.components},{ComponentPreview:i,ComponentSource:e,Table:a}=l;return i||n("ComponentPreview"),e||n("ComponentSource"),a||n("Table"),[r(l.h1,{children:"Button按钮"}),`
 `,r(l.h1,{children:"基础用法"}),`
 `,r(l.p,{children:"标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。"}),`
 `,r(l.p,{children:"guya-ui提供了五种按钮。"}),`
@@ -155,3 +155,4 @@ import{M as d,c as r,m as o}from"./index-CRTjpkgI.js";function c(s){const l={cod
 `,r(l.span,{className:"line",get children(){return r(l.span,{style:{color:"#999999","--shiki-dark":"#666666"},children:"  }"})}})]}})}})}})}}),`
 `,r(l.h1,{children:"API"}),`
 `,r(a,{data:[{property:"type",des:"设置按钮类型",type:"primary | link | text | default",default:"default"},{property:"round",des:"是否为圆角按钮",type:"boolean",default:"false"},{property:"circle",des:"是否为圆形按钮",type:"boolean",default:"false"},{property:"disabled",des:"设置按钮失效状态",type:"boolean",default:"false"},{property:"size",des:"设置按钮大小",type:"large | small",default:""},{property:"onClick",des:"点击按钮时的回调",type:"JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>"},{property:"block",des:"将按钮宽度调整为其父宽度的选项",type:"boolean",default:"false"},{property:"htmlType",des:"设置 button 原生的 type 值",type:'"button" | "reset" | "submit"',default:"button"}]})]}function k(s={}){const{wrapper:l}={...d(),...s.components};return l?r(l,o(s,{get children(){return r(c,s)}})):c(s)}function n(s,l){throw new Error("Expected component `"+s+"` to be defined: you likely forgot to import, pass, or provide it.")}export{k as default};
+//# sourceMappingURL=button-eyTA5XVK.js.map

@@ -1,4 +1,4 @@
-import{M as c,c as r,m as d}from"./index-CRTjpkgI.js";function o(n){const e={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...n.components},{ComponentPreview:i,ComponentSource:l,Table:a}=e;return i||s("ComponentPreview"),l||s("ComponentSource"),a||s("Table"),[r(e.h1,{children:"Tag 标签"}),`
+import{M as c,c as r,m as d}from"./index-Cb_gSiLb.js";function o(n){const e={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...n.components},{ComponentPreview:i,ComponentSource:l,Table:a}=e;return i||s("ComponentPreview"),l||s("ComponentSource"),a||s("Table"),[r(e.h1,{children:"Tag 标签"}),`
 `,r(e.p,{children:"用于标记和选择。"}),`
 `,r(e.h2,{children:"基础用法"}),`
 `,r(e.p,{children:"由 type 属性来选择 tag 的类型"}),`
@@ -17,3 +17,4 @@ import{M as c,c as r,m as d}from"./index-CRTjpkgI.js";function o(n){const e={cod
 `,r(e.span,{className:"line"})]}})}})}})}}),`
 `,r(e.h1,{children:"API"}),`
 `,r(a,{data:[{property:"type",des:"设置tag类型",type:"primary",default:""},{property:"closeIcon",des:"设置tag类型",type:"boolean | JSX.Element",default:"false"},{property:"onClose",des:"关闭时的回调（可用来阻止默认行为）",type:"JSX.EventHandlerUnion<HTMLSpanElement, MouseEvent>",default:""}]})]}function t(n={}){const{wrapper:e}={...c(),...n.components};return e?r(e,d(n,{get children(){return r(o,n)}})):o(n)}function s(n,e){throw new Error("Expected component `"+n+"` to be defined: you likely forgot to import, pass, or provide it.")}export{t as default};
+//# sourceMappingURL=tag-Wyxyj4Qm.js.map

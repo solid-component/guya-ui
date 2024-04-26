@@ -1,4 +1,4 @@
-import{M as c,c as r,m as o}from"./index-CRTjpkgI.js";function n(s){const l={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...s.components},{ComponentPreview:i,ComponentSource:e}=l;return i||a("ComponentPreview"),e||a("ComponentSource"),[r(l.h1,{children:"Tooltip 文字提示"}),`
+import{M as c,c as r,m as o}from"./index-Cb_gSiLb.js";function n(s){const l={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",span:"span",...c(),...s.components},{ComponentPreview:i,ComponentSource:e}=l;return i||a("ComponentPreview"),e||a("ComponentSource"),[r(l.h1,{children:"Tooltip 文字提示"}),`
 `,r(l.p,{children:"简单的文字提示气泡框。"}),`
 `,r(l.h2,{children:"何时使用"}),`
 `,r(l.p,{children:"鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。"}),`
@@ -129,3 +129,4 @@ import{M as c,c as r,m as o}from"./index-CRTjpkgI.js";function n(s){const l={cod
 `,r(l.span,{className:"line",get children(){return r(l.span,{style:{color:"#999999","--shiki-dark":"#666666"},children:"  );"})}}),`
 `,r(l.span,{className:"line",get children(){return r(l.span,{style:{color:"#999999","--shiki-dark":"#666666"},children:"}"})}}),`
 `,r(l.span,{className:"line"})]}})}})}})}})]}function h(s={}){const{wrapper:l}={...c(),...s.components};return l?r(l,o(s,{get children(){return r(n,s)}})):n(s)}function a(s,l){throw new Error("Expected component `"+s+"` to be defined: you likely forgot to import, pass, or provide it.")}export{h as default};
+//# sourceMappingURL=tooltip-DCdqPyLp.js.map

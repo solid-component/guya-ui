@@ -1,4 +1,4 @@
-import{M as o,c as r,m as d}from"./index-CRTjpkgI.js";function c(s){const l={code:"code",h1:"h1",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...o(),...s.components},{ComponentPreview:i,ComponentSource:e,Table:a}=l;return i||n("ComponentPreview"),e||n("ComponentSource"),a||n("Table"),[r(l.h1,{children:"Space 间距"}),`
+import{M as o,c as r,m as d}from"./index-Cb_gSiLb.js";function c(s){const l={code:"code",h1:"h1",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...o(),...s.components},{ComponentPreview:i,ComponentSource:e,Table:a}=l;return i||n("ComponentPreview"),e||n("ComponentSource"),a||n("Table"),[r(l.h1,{children:"Space 间距"}),`
 `,r(l.h1,{children:"何时使用"}),`
 `,r(l.p,{children:"避免组件紧贴在一起，拉开统一的空间。"}),`
 `,r(l.ul,{get children(){return[`
@@ -76,3 +76,4 @@ import{M as o,c as r,m as d}from"./index-CRTjpkgI.js";function c(s){const l={cod
 `,r(l.span,{className:"line"})]}})}})}})}}),`
 `,r(l.h1,{children:"API"}),`
 `,r(a,{data:[{property:"direction",des:"间距方向",type:"vertical | horizontal",default:"horizontal"},{property:"size",des:"间距大小",type:"large | small | middle",default:"small"},{property:"wrap",des:"是否自动换行，仅在 horizontal 时有效",type:"boolean",default:"false"}]})]}function k(s={}){const{wrapper:l}={...o(),...s.components};return l?r(l,d(s,{get children(){return r(c,s)}})):c(s)}function n(s,l){throw new Error("Expected component `"+s+"` to be defined: you likely forgot to import, pass, or provide it.")}export{k as default};
+//# sourceMappingURL=space-BJSGyxAG.js.map

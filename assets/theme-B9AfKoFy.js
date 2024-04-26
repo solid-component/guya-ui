@@ -1,4 +1,4 @@
-import{M as o,c as e,m as d}from"./index-CRTjpkgI.js";function c(s){const r={a:"a",code:"code",h1:"h1",p:"p",pre:"pre",span:"span",...o(),...s.components},{ComponentPreview:i,ComponentSource:n,Table:a}=r;return i||l("ComponentPreview"),n||l("ComponentSource"),a||l("Table"),[e(r.h1,{children:"Theme 主题"}),`
+import{M as o,c as e,m as d}from"./index-Cb_gSiLb.js";function c(s){const r={a:"a",code:"code",h1:"h1",p:"p",pre:"pre",span:"span",...o(),...s.components},{ComponentPreview:i,ComponentSource:n,Table:a}=r;return i||l("ComponentPreview"),n||l("ComponentSource"),a||l("Table"),[e(r.h1,{children:"Theme 主题"}),`
 `,e(r.p,{children:`guya-ui 默认提供主题, guya-ui中的主题参考了antd的主题，将 Design Token 拆解为 Seed Token、Map Token 和 Alias Token 三部分。
 这三组 Token 并不是简单的分组，而是一个三层的派生关系，由 Seed Token 派生 Map Token，再由 Map Token 派生 Alias Token。
 在大部分情况下，使用 Seed Token 就可以满足定制主题的需要`}),`
@@ -88,3 +88,4 @@ import{M as o,c as e,m as d}from"./index-CRTjpkgI.js";function c(s){const r={a:"
 `,e(a,{data:[{property:"prefix",des:"设置组件前缀",type:"string",default:"h"}]}),`
 `,e(r.h1,{children:"SeedToken"}),`
 `,e(r.p,{get children(){return e(r.a,{href:"https://ant-design.antgroup.com/docs/react/customize-theme#seedtoken",children:"参考"})}})]}function k(s={}){const{wrapper:r}={...o(),...s.components};return r?e(r,d(s,{get children(){return e(c,s)}})):c(s)}function l(s,r){throw new Error("Expected component `"+s+"` to be defined: you likely forgot to import, pass, or provide it.")}export{k as default};
+//# sourceMappingURL=theme-B9AfKoFy.js.map
