@@ -1,4 +1,4 @@
-import{M as a,c as n,m as l}from"./index-DBPcm_A9.js";function r(s){const e=Object.assign({h1:"h1",pre:"pre",code:"code",span:"span"},a(),s.components);return[n(e.h1,{id:"安装",children:"安装"}),`
+import{M as a,c as n,m as l}from"./index-CSTHZbNA.js";function r(s){const e=Object.assign({h1:"h1",pre:"pre",code:"code",span:"span"},a(),s.components);return[n(e.h1,{id:"安装",children:"安装"}),`
 `,n(e.pre,{className:"shiki shiki-themes vitesse-light vitesse-dark",style:{backgroundColor:"#ffffff","--shiki-dark-bg":"#121212",color:"#393a34","--shiki-dark":"#dbd7caee"},tabIndex:"0",get children(){return n(e.code,{get children(){return[n(e.span,{className:"line",get children(){return n(e.span,{style:{color:"#A0ADA0","--shiki-dark":"#758575DD"},children:"# 选择一个你喜欢的包管理器"})}}),`
 `,n(e.span,{className:"line"}),`
 `,n(e.span,{className:"line",get children(){return n(e.span,{style:{color:"#A0ADA0","--shiki-dark":"#758575DD"},children:"# NPM"})}}),`
