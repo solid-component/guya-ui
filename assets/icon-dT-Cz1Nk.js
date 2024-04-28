@@ -1,4 +1,4 @@
-import{M as r,c as e,m as l}from"./index-CYg3LTZf.js";function s(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span",a:"a"},r(),i.components);return[e(n.h1,{id:"icon-图标",children:"Icon 图标"}),`
+import{M as r,c as e,m as l}from"./index-uQuxrWgA.js";function s(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span",a:"a"},r(),i.components);return[e(n.h1,{id:"icon-图标",children:"Icon 图标"}),`
 `,e(n.p,{children:"guya-ui 提供了一套常用的图标集合。"}),`
 `,e(n.h1,{id:"安装",children:"安装"}),`
 `,e(n.h2,{id:"使用包管理器",children:"使用包管理器"}),`
