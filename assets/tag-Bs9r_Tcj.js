@@ -1,4 +1,4 @@
-import{i as n,c as r,a2 as s,t as o,M as c,m as d}from"./index-BiIIq6BJ.js";import{C as t}from"./component-preview-tcGdAlNq.js";import{T as h}from"./table-B1e7gMxw.js";var k=o("<div>");function p(){return(()=>{var i=k();return n(i,r(s,{children:"123"}),null),n(i,r(s,{type:"primary",children:"123"}),null),n(i,r(s,{closeIcon:!0,children:"123"}),null),n(i,r(s,{type:"primary",closeIcon:!0,children:"123"}),null),i})()}function a(i){const e=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span"},c(),i.components),{ComponentSource:l}=e;return l||y("ComponentSource",!0),[r(e.h1,{id:"tag-标签",children:"Tag 标签"}),`
+import{i as n,c as r,a3 as s,t as o,M as c,m as d}from"./index-DGP6wJTn.js";import{C as t}from"./component-preview-DDJfQgKC.js";import{T as h}from"./table-CBOLTIVb.js";var k=o("<div>");function p(){return(()=>{var i=k();return n(i,r(s,{children:"123"}),null),n(i,r(s,{type:"primary",children:"123"}),null),n(i,r(s,{closeIcon:!0,children:"123"}),null),n(i,r(s,{type:"primary",closeIcon:!0,children:"123"}),null),i})()}function a(i){const e=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span"},c(),i.components),{ComponentSource:l}=e;return l||y("ComponentSource",!0),[r(e.h1,{id:"tag-标签",children:"Tag 标签"}),`
 `,r(e.p,{children:"用于标记和选择。"}),`
 `,r(e.h2,{id:"基础用法",children:"基础用法"}),`
 `,r(e.p,{children:"由 type 属性来选择 tag 的类型"}),`
@@ -17,4 +17,3 @@ import{i as n,c as r,a2 as s,t as o,M as c,m as d}from"./index-BiIIq6BJ.js";impo
 `,r(e.span,{className:"line"})]}})}})}})}}),`
 `,r(e.h1,{id:"api",children:"API"}),`
 `,r(h,{data:[{property:"type",des:"设置tag类型",type:"primary",default:""},{property:"closeIcon",des:"设置tag类型",type:"boolean | JSX.Element",default:"false"},{property:"onClose",des:"关闭时的回调（可用来阻止默认行为）",type:"JSX.EventHandlerUnion<HTMLSpanElement, MouseEvent>",default:""}]})]}function B(i={}){const{wrapper:e}=Object.assign({},c(),i.components);return e?r(e,d(i,{get children(){return r(a,i)}})):a(i)}function y(i,e){throw new Error("Expected "+(e?"component":"object")+" `"+i+"` to be defined: you likely forgot to import, pass, or provide it.")}export{B as default};
-//# sourceMappingURL=tag-CMJh1hrB.js.map

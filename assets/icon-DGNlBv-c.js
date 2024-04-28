@@ -1,4 +1,4 @@
-import{M as r,c as e,m as l}from"./index-BiIIq6BJ.js";function s(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span",a:"a"},r(),i.components);return[e(n.h1,{id:"icon-图标",children:"Icon 图标"}),`
+import{M as r,c as e,m as l}from"./index-DGP6wJTn.js";function s(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",pre:"pre",code:"code",span:"span",a:"a"},r(),i.components);return[e(n.h1,{id:"icon-图标",children:"Icon 图标"}),`
 `,e(n.p,{children:"guya-ui 提供了一套常用的图标集合。"}),`
 `,e(n.h1,{id:"安装",children:"安装"}),`
 `,e(n.h2,{id:"使用包管理器",children:"使用包管理器"}),`
@@ -14,4 +14,3 @@ import{M as r,c as e,m as l}from"./index-BiIIq6BJ.js";function s(i){const n=Obje
 `,e(n.h1,{id:"图标集合",children:"图标集合"}),`
 `,e(n.p,{get children(){return[`只要你安装了solid-dada-icons, 就可以在任意版本里使用 SVG 图标。
 `,e(n.a,{href:"https://element-plus.gitee.io/zh-CN/component/icon.html#icon-collection",children:"更多"})]}})]}function c(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,l(i,{get children(){return e(s,i)}})):s(i)}export{c as default};
-//# sourceMappingURL=icon-BfZPwSd5.js.map
